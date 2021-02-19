@@ -1,0 +1,54 @@
+SourceInsight 常用操作   
+
+主要操作：
+
+1、背景色选择 
+    要改变背景色Options->preference->windows background->color设置背景色 
+
+2、解决字符等宽对齐问题。
+    SIS默认字体是VERDANA，很漂亮。这网页上应该也是用的VERDANA字体。但由于美观的缘故，VERDANA字体是不等宽的。比如下面两行
+    llllllllll
+    MMMMMMMMMM
+    同样10个字符，长度差多了.用VERDANA来看程序，有些本应该对齐的就歪了。解放方法是使用等宽的字体，但肯定比较丑。比较推荐的是用Courier New。 
+3、解决TAB键缩进问题
+    Options-> Document Options里面的右下角Editing Options栏里，把Expand tabs勾起来，然后确定。OK，现在TAB键的缩进和四个空格的缩进在SIS里面看起来就对齐咯 
+
+4、SI中的自动对齐设置:
+    在C程序里, 如果遇到行末没有分号的语句,如IF, WHILE, SWITCH等, 写到该行末按回车，则新行自动相对上一行缩进两列。
+    Option->Document option下的Auto Indient中Auto Indient Type有三种类型 None,Simple,Smart。个人推荐选用Simple类型。 
+5、向项目中添加文件时，只添加特定类型的文件（文件类型过滤器）
+    编辑汇编代码时，在SIS里建立PROJECT并ADD TREE的时候，根据默认设置并不会把该TREE里面所有汇编文件都包含进来
+    只加了.inc和.asm后缀的，.s后缀的没有。而且用SIS打开.s的文件，一片黑白没有色彩，感觉回到DOS的EDIT时代了…… 
+    解决方法是在Options->Document Options里面，点左上的Document Type下拉菜单，选择x86 Asm Source File，
+    然后在右边的File filter里*.asm；*.inc；的后面加上*.s；接着CLOSE就可以了。
+    上面问题解决了，但注意加入*.s后还需要重新ADD TREE一遍才能把这些汇编加到PROJECT里面。 
+6、添加文件类型
+    用户可以定义自己的类型，Options->Document Options->add type,定义文件类型名以及文件名后缀。
+    勾选include when adding to projects在添加目录下文件到工程是该类文件就会添加进SI的工程。
+    如果需要将所有文件添加进SI的工程，可以定义一种文件类型*.*。   
+7、恢复ctrl+a的全选功能
+    通过关键词save 找到save all，更改为ctrl+shift+a，通过关键词select找到select all，更改为ctrl +a 
+
+
+常用快捷键： 
+
+
+1. ctrl+=:转到定义 
+2. alt+/:查看引用 
+3. F3:向后搜索 
+4. F4：向前搜索 
+5. F5：转到行数 
+6. F7:查看符号 
+7. F8:当前文档查看 
+8. F9:向左缩进 
+9. F10:向右缩进 
+10. Shift+F3: 从光标位置往前搜 
+11. Shift+F4: 从光标位置往后搜 
+12. Shift+Ctrl+f:在工程中搜索 
+13.按住ctrl，鼠标点击变量，显示变量定义 
+14.alt+F12:字体等宽 
+15.shift+f8:显示光标单词 
+16.ctrl+g: 跳转 
+
+
+本文来自CSDN博客，转载请标明出处：http://blog.csdn.net/sf0003/archive/2009/10/22/4715502.aspx
